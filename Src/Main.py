@@ -3,7 +3,6 @@ from flask_mysqldb import MySQL
 from Src.Servidor.ConexionDB import Usuarios
 from Src.Servidor.BaseDatos import db
 
-
 main = Blueprint('main', __name__)
 
 mysql = MySQL()
