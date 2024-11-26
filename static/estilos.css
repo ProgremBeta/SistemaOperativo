@@ -1,20 +1,36 @@
 .Caja
 {
-
-}
-
-.CajaRegistrados
-{
-	width: ;
-	height: auto;
+	width: auto;
+	align-self: center;
 	display: flex;
-	justify-items: center;
 	flex-direction: column;
-	border-radius: 10px;
-	background-color: seagreen;
+	justify-content: center;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 30px;
 }
 
-.CajaInicio 
+.Caja ul
 {
-	text-align: center;
+	margin:20px;
+	display: flex;
+	flex-direction: row;
+}
+
+.CajaPrincipal
+{
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+}
+
+li
+{
+	margin: 30px;
+	list-style: none;
+}
+
+a
+{
+	text-decoration: none;
 }

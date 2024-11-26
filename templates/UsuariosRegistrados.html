@@ -11,15 +11,19 @@
 	
 </body>
 </html>
-<div class="Caja">
-	<h2>Registrados</h2>
-		<div class="Caja">			
+<div class="CajaPrincipal">
+	<ul>
+		<div class="Caja">	
+		<h2>Registrados</h2>		
     	{% for usuario in usuarios %}
-    	<div class="CajaRegistrados">
-    	    <ul>Id: {{ usuario.id }}</ul>
-    	    <ul>Nombre: {{ usuario.nombre }}</ul>
-    	    <ul>Apellido: {{ usuario.apellido }}</ul>
-    	</div>
+    		<div class="CajaUsuarios">
+    			<ul>
+    		    	<li>Id: {{ usuario.id }}</li>
+    		    	<li>Nombre: {{ usuario.nombre }}</li>
+    		    	<li>Apellido: {{ usuario.apellido }}</li>
+    			</ul>
+    		</div>
     	{% endfor %}
-    </div>
+    	</div>
+	</ul>
 </div>
