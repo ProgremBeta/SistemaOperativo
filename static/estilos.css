@@ -1,3 +1,11 @@
+.CajaPrincipal
+{
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	flex-direction: column;
+}
+
 .Caja
 {
 	width: auto;
@@ -6,8 +14,8 @@
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
-	background-color: rgba(0, 0, 0, 0.2);
 	border-radius: 30px;
+	background-color: rgba(0, 0, 0, 0.2);
 }
 
 .Caja ul
@@ -17,20 +25,51 @@
 	flex-direction: row;
 }
 
-.CajaPrincipal
+.CajaConte
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 15px;
+  border-radius: 20px;
+}
+
+.CajaUsuarios
+{
+  	width: 250px;
+  	height: auto;
+  	margin: 15px;
+  	padding: 5px;
+  	border-radius: 20%;
+}
+
+.CajaUsuarios ul
 {
 	display: flex;
-	justify-content: center;
-	justify-items: center;
+	flex-direction: column;
 }
 
 li
 {
 	margin: 30px;
 	list-style: none;
+	display: flex;
+	flex-direction: row;
 }
 
 a
 {
 	text-decoration: none;
+}
+
+h2
+{
+	font-size: 50px;
+	text-align: center;
+}
+
+div
+{
+	display: flex;
+	justify-content: center;
 }

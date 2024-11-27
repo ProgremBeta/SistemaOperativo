@@ -1,7 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
-
 from Src.Servidor.BaseDatos import db
 from Src.Main import main
 from Src.config import Desarrollo

@@ -13,8 +13,8 @@
 </html>
 <div class="CajaPrincipal">
 	<ul>
-		<div class="Caja">	
 		<h2>Registrados</h2>		
+		<div class="CajaConte">	
     	{% for usuario in usuarios %}
     		<div class="CajaUsuarios">
     			<ul>
@@ -22,6 +22,7 @@
     		    	<li>Nombre: {{ usuario.nombre }}</li>
     		    	<li>Apellido: {{ usuario.apellido }}</li>
     			</ul>
+    			<li><button>Eliminar</button><button>Modificar</button></li>
     		</div>
     	{% endfor %}
     	</div>
