@@ -9,15 +9,14 @@
 <body>
 	<div class="CajaPrincipal">
 		<h2>Login</h2>
-		<form>
-			<div>
-				
-					<li><input type="text" name="nombre" placeholder="Ingresa tu nombre"></li>
-					<li><input type="text" name="id" placeholder="Ingresa tu id"></li>
-		
-					<li> <button> <a href="/logueado">Conectado con exito</a> </button> </li>
-			</div>
-		</form>
+		 <form action="/logueado" method="POST">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" required><br>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+        <button type="submit">Ingresar</button>
+    </form>
+    </form>
 	</div>
 </body>
 </html>
