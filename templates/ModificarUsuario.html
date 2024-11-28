@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilos.css') }}">
+    <title>Modificar Usuario</title>
+</head>
+<body>
+    <div class="CajaPrincipal">
+        <h2>Modificar Usuario</h2>
+        <form action="/modificar/{{ usuario.id }}" method="POST">
+            <li><input type="text" name="nombre" value="{{ usuario.nombre }}" placeholder="Escribe tu nombre"></li>
+            <li><input type="text" name="apellido" value="{{ usuario.apellido }}" placeholder="Escribe tu apellido"></li>
+            <li><button type="submit">Guardar cambios</button></li>
+        </form>
+    </div>
+</body>
+</html>

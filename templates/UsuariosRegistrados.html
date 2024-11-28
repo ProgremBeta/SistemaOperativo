@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="estilos.css">
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilos.css') }}">
-	<title>Usuarios Registrados</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilos.css') }}">
+    <title>Usuarios Registrados</title>
 </head>
 <body>
-	
+    <div class="CajaPrincipal">
+        <ul>
+            <h2>Registrados</h2>       
+            <div class="CajaConte">    
+            {% for usuario in usuarios %}
+                <div class="CajaUsuarios">
+                    <ul>
+                        <li>Id: {{ usuario.id }}</li>
+                        <li>Nombre: {{ usuario.nombre }}</li>
+                        <li>Apellido: {{ usuario.apellido }}</li>
+                    </ul>
+                    <li>
+                        <form action="/eliminar/{{ usuario.id }}" method="POST" style="display: inline;">
+                            <button type="submit">Eliminar</button>
+                        </form>
+                        <a href="/modificar/{{ usuario.id }}">
+                            <button>Modificar</button>
+                        </a>
+                    </li>
+                </div>
+            {% endfor %}
+            </div>
+        </ul>
+    </div>
 </body>
 </html>
-<div class="CajaPrincipal">
-	<ul>
-		<h2>Registrados</h2>		
-		<div class="CajaConte">	
-    	{% for usuario in usuarios %}
-    		<div class="CajaUsuarios">
-    			<ul>
-    		    	<li>Id: {{ usuario.id }}</li>
-    		    	<li>Nombre: {{ usuario.nombre }}</li>
-    		    	<li>Apellido: {{ usuario.apellido }}</li>
-    			</ul>
-    			<li><button>Eliminar</button><button>Modificar</button></li>
-    		</div>
-    	{% endfor %}
-    	</div>
-	</ul>
-</div>
