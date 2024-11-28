@@ -7,6 +7,8 @@ from Src.config import Desarrollo
 
 app = Flask(__name__)
 
+app.secret_key = 'mi_clave_secreta'
+
 app.config['SQLALCHEMY_DATABASE_URI']= 'mysql://root:134679@localhost/Sistemas'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 

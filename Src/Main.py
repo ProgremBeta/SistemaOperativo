@@ -1,4 +1,4 @@
-from flask import Blueprint , jsonify, render_template, request, redirect, url_for
+from flask import Blueprint , jsonify, render_template, request, redirect, url_for,session, flash
 from flask_mysqldb import MySQL
 from Src.Servidor.ConexionDB import Usuarios
 from Src.Servidor.BaseDatos import db
@@ -16,16 +16,27 @@ def index():
 def login():
     return render_template("Login.html")
 
-@main.route('/login')
+@main.route('/logueado', methods=['POST'])
 def logueado():
-    return "logiado"
+    nombre = request.form['nombre']
+
+    usuario = Usuarios.query.filter_by(nombre=nombre).first()
+
+    if usuario:
+        session['user_id'] = usuario.id
+        session['user_name'] = usuario.nombre
+        flash(f"Bienvenido, {usuario.nombre}", "success")
+        return redirect('/usuariosregistrados')
+    else:
+        flash("Nombre incorrecto. Por favor, inténtalo de nuevo.", "danger")
+        return redirect('/')
 
 
 @main.route('/registro')
 def registro():
     return render_template("Registro.html")
 
-@main.route('/login' , methods = ['POST'])
+@main.route('/registrando' , methods = ['POST'])
 def Registrando():
     id = request.form['id']
     nombre = request.form['nombre']
