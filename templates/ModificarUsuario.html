@@ -9,6 +9,7 @@
 <body>
     <div class="CajaPrincipal">
         <h2>Modificar Usuario</h2>
+        
         <form action="/modificar/{{ usuario.id }}" method="POST">
             <li><input type="text" name="nombre" value="{{ usuario.nombre }}" placeholder="Escribe tu nombre"></li>
             <li><input type="text" name="apellido" value="{{ usuario.apellido }}" placeholder="Escribe tu apellido"></li>
